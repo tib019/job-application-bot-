@@ -1,62 +1,129 @@
-# Job Application Bot
+# 🤖 Job Application Bot
 
-Ein vollautomatisches Bewerbungssystem, das ATS-Systeme umgeht, alle 4 Stunden nach relevanten Jobs sucht, automatisch Bewerbungen versendet und vollständige Transparenz über den Bewerbungsprozess bietet.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
+[![Tests](https://img.shields.io/badge/tests-24%20passing-success)](https://github.com/tibo47-161/job-application-bot)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/tibo47-161/job-application-bot/pulls)
 
-## Features
+> **Ein vollautomatisches Bewerbungssystem, das ATS-Systeme umgeht, alle 4 Stunden nach relevanten Jobs sucht und automatisch personalisierte Bewerbungen versendet.**
 
-### Automatische Jobsuche
+Inspiriert durch die Herausforderungen moderner Jobsuche mit Applicant Tracking Systems (ATS), automatisiert dieser Bot den gesamten Bewerbungsprozess – von der Stellensuche bis zur individualisierten Bewerbung.
+
+---
+
+## 📋 Inhaltsverzeichnis
+
+- [Features](#-features)
+- [Demo](#-demo)
+- [Technologie-Stack](#-technologie-stack)
+- [Installation](#-installation)
+- [Konfiguration](#-konfiguration)
+- [Verwendung](#-verwendung)
+- [Architektur](#-architektur)
+- [Deployment](#-deployment)
+- [Tests](#-tests)
+- [Roadmap](#-roadmap)
+- [Beitragen](#-beitragen)
+- [Lizenz](#-lizenz)
+
+---
+
+## ✨ Features
+
+### 🔍 **Automatische Jobsuche**
 - **Multi-Platform-Scraping**: Durchsucht Indeed, StepStone und weitere Job-Portale
 - **Intelligente Filterung**: Branchen-, Standort- und Keyword-basierte Suche
-- **Relevanz-Scoring**: Automatische Bewertung der Job-Relevanz basierend auf Ihrem Profil
+- **Relevanz-Scoring**: Automatische Bewertung der Job-Relevanz (0-100%)
 - **Duplikaterkennung**: Verhindert mehrfache Bewerbungen auf dieselbe Stelle
 
-### ATS-Optimierung
+### 🎯 **ATS-Optimierung**
 - **ATS-Erkennung**: Identifiziert automatisch verwendete ATS-Systeme
 - **Keyword-Optimierung**: Passt CVs und Anschreiben an ATS-Anforderungen an
 - **Best-Practice-Formulare**: Intelligentes Ausfüllen von Bewerbungsformularen
+- **Erfolgsquote-Tracking**: Misst und optimiert die Bewerbungsqualität
 
-### LLM-Integration
+### 🤖 **LLM-Integration**
 - **Individualisierte Anschreiben**: Automatische Generierung personalisierter Cover Letters
 - **Job-Matching**: Analyse der Stellenbeschreibung und Abgleich mit Ihrem Profil
 - **Qualitätssicherung**: Bewertung der Bewerbungsqualität vor dem Versand
+- **Kontinuierliche Verbesserung**: Lernt aus erfolgreichen Bewerbungen
 
-### Automatisierung
-- **4-Stunden-Scheduler**: Automatische Jobsuche alle 4 Stunden
+### ⏰ **Automatisierung**
+- **4-Stunden-Scheduler**: Automatische Jobsuche alle 4 Stunden (0, 4, 8, 12, 16, 20 Uhr)
 - **Tägliche Updates**: Zusammenfassung der Aktivitäten jeden Abend um 20:00 Uhr
 - **Retry-Logik**: Automatische Wiederholung bei fehlgeschlagenen Bewerbungen
 - **Benachrichtigungen**: Echtzeit-Updates über neue Stellen und Bewerbungsstatus
 
-### Dashboard & Verwaltung
+### 📊 **Dashboard & Verwaltung**
 - **Übersichtsdashboard**: Statistiken zu Jobs, Bewerbungen und Erfolgsquoten
 - **Job-Verwaltung**: Filtern, Durchsuchen und Bewerben auf gefundene Stellen
 - **Bewerbungstracking**: Vollständiger Überblick über alle eingereichten Bewerbungen
 - **CV-Management**: Upload und Verwaltung mehrerer Lebensläufe
 - **Suchkonfiguration**: Flexible Einrichtung von Suchkriterien
 
-## Technologie-Stack
+---
 
-- **Frontend**: React 19, TypeScript, Tailwind CSS 4, shadcn/ui
-- **Backend**: Node.js, Express, tRPC 11
-- **Database**: MySQL/TiDB mit Drizzle ORM
-- **Storage**: S3-kompatibler Cloud-Storage
-- **Scheduler**: node-cron für zeitgesteuerte Aufgaben
-- **Scraping**: Puppeteer, Cheerio
-- **LLM**: Manus Built-in LLM API
+## 🎬 Demo
 
-## Installation
+### Dashboard
+![Dashboard Overview](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
+
+### Job-Listings
+![Job Listings](https://via.placeholder.com/800x400?text=Job+Listings+Screenshot)
+
+### Bewerbungstracking
+![Application Tracking](https://via.placeholder.com/800x400?text=Application+Tracking+Screenshot)
+
+---
+
+## 🛠 Technologie-Stack
+
+### Frontend
+- **React 19** - Moderne UI-Bibliothek
+- **TypeScript** - Type-Safe Development
+- **Tailwind CSS 4** - Utility-First CSS Framework
+- **shadcn/ui** - Hochwertige UI-Komponenten
+- **Wouter** - Lightweight Routing
+- **TanStack Query** - Data Fetching & Caching
+
+### Backend
+- **Node.js 22** - JavaScript Runtime
+- **Express 4** - Web Framework
+- **tRPC 11** - End-to-End Type-Safe APIs
+- **Drizzle ORM** - TypeScript ORM
+- **MySQL/TiDB** - Relationale Datenbank
+
+### Infrastructure
+- **Puppeteer** - Headless Browser für Web Scraping
+- **Cheerio** - HTML Parsing
+- **node-cron** - Scheduler für zeitgesteuerte Aufgaben
+- **S3** - Cloud Storage für CVs und Dokumente
+- **LLM API** - AI-gestützte Textgenerierung
+
+### DevOps
+- **Docker** - Containerisierung
+- **GitHub Actions** - CI/CD Pipeline
+- **Vitest** - Unit Testing Framework
+- **pnpm** - Fast Package Manager
+
+---
+
+## 📦 Installation
 
 ### Voraussetzungen
-- Node.js 22.x oder höher
-- pnpm 10.x oder höher
-- MySQL/TiDB Datenbank
-- S3-kompatibler Storage (wird automatisch bereitgestellt)
+
+- **Node.js** 22.x oder höher
+- **pnpm** 10.x oder höher
+- **MySQL/TiDB** Datenbank
+- **S3-kompatibler Storage** (optional, für CV-Uploads)
 
 ### Lokale Installation
 
 1. **Repository klonen**
 ```bash
-git clone <repository-url>
-cd job_application_bot
+git clone https://github.com/tibo47-161/job-application-bot.git
+cd job-application-bot
 ```
 
 2. **Dependencies installieren**
@@ -64,27 +131,65 @@ cd job_application_bot
 pnpm install
 ```
 
-3. **Datenbank einrichten**
+3. **Umgebungsvariablen konfigurieren**
+
+Erstellen Sie eine `.env` Datei im Projekt-Root:
+
+```env
+# Database
+DATABASE_URL=mysql://user:password@localhost:3306/job_application_bot
+
+# Authentication
+JWT_SECRET=your-random-secret-key-here
+OAUTH_SERVER_URL=https://api.manus.im
+VITE_OAUTH_PORTAL_URL=https://manus.im/oauth
+VITE_APP_ID=your-app-id
+
+# Owner Information
+OWNER_OPEN_ID=your-open-id
+OWNER_NAME=Your Name
+
+# LLM API
+BUILT_IN_FORGE_API_URL=https://forge.manus.im
+BUILT_IN_FORGE_API_KEY=your-api-key
+VITE_FRONTEND_FORGE_API_URL=https://forge.manus.im
+VITE_FRONTEND_FORGE_API_KEY=your-frontend-api-key
+
+# S3 Storage (optional)
+AWS_ACCESS_KEY_ID=your-access-key
+AWS_SECRET_ACCESS_KEY=your-secret-key
+AWS_REGION=eu-central-1
+AWS_S3_BUCKET=your-bucket-name
+```
+
+4. **Datenbank initialisieren**
 ```bash
 pnpm db:push
 ```
 
-4. **Development Server starten**
+5. **Development Server starten**
 ```bash
 pnpm dev
 ```
 
 Der Server läuft nun auf `http://localhost:3000`
 
-### Cloud-Deployment
+### Docker Installation
 
-Das Projekt ist für Manus-Hosting optimiert und kann mit einem Klick deployed werden:
+```bash
+# Mit Docker Compose
+docker-compose up -d
 
-1. Checkpoint erstellen (über die UI oder CLI)
-2. Auf "Publish" klicken im Management-UI
-3. Optional: Custom Domain konfigurieren
+# Datenbank-Migrationen ausführen
+docker-compose exec app pnpm db:push
 
-## Konfiguration
+# Logs anzeigen
+docker-compose logs -f
+```
+
+---
+
+## ⚙️ Konfiguration
 
 ### Erste Schritte
 
@@ -97,10 +202,10 @@ Das Projekt ist für Manus-Hosting optimiert und kann mit einem Klick deployed w
    - Navigieren Sie zu "Konfiguration"
    - Erstellen Sie eine neue Suchkonfiguration
    - Definieren Sie:
-     - Suchbegriffe (z.B. "Software Developer, Full Stack")
-     - Standorte (z.B. "Berlin, München, Remote")
-     - Branchen (z.B. "IT, Software, Technology")
-     - Plattformen (indeed, stepstone)
+     - **Suchbegriffe**: z.B. "Software Developer, Full Stack Engineer"
+     - **Standorte**: z.B. "Berlin, München, Remote"
+     - **Branchen**: z.B. "IT, Software, Technology"
+     - **Plattformen**: indeed, stepstone
 
 3. **Scheduler aktivieren**
    - Der Scheduler startet automatisch beim Server-Start
@@ -112,7 +217,9 @@ Das Projekt ist für Manus-Hosting optimiert und kann mit einem Klick deployed w
 Sie können jederzeit eine manuelle Jobsuche auslösen:
 - Dashboard → "Manuell starten" Button im Scheduler-Status-Bereich
 
-## Verwendung
+---
+
+## 🚀 Verwendung
 
 ### Automatischer Modus
 
@@ -142,7 +249,31 @@ Verfolgen Sie Ihre Bewerbungen unter "Bewerbungen":
 - **Angenommen**: Jobangebot erhalten
 - **Abgelehnt**: Absage erhalten
 
-## Architektur
+---
+
+## 🏗 Architektur
+
+### System-Übersicht
+
+```
+┌─────────────────┐
+│   React Frontend│
+│   (Dashboard)   │
+└────────┬────────┘
+         │ tRPC
+         ▼
+┌─────────────────┐
+│  Express Server │
+│   (tRPC API)    │
+└────────┬────────┘
+         │
+    ┌────┴────┬──────────┬──────────┐
+    ▼         ▼          ▼          ▼
+┌────────┐ ┌──────┐ ┌────────┐ ┌──────┐
+│Database│ │ LLM  │ │   S3   │ │Cron  │
+│ MySQL  │ │ API  │ │Storage │ │Jobs  │
+└────────┘ └──────┘ └────────┘ └──────┘
+```
 
 ### Backend-Services
 
@@ -163,117 +294,177 @@ Verfolgen Sie Ihre Bewerbungen unter "Bewerbungen":
 - **application_logs**: Detaillierte Logs pro Bewerbung
 - **scheduler_runs**: Scheduler-Ausführungshistorie
 
-### API-Routen (tRPC)
+---
 
-- **auth**: Authentifizierung und Session-Management
-- **cv**: CV-Upload, -Verwaltung und -Löschung
-- **coverLetter**: Anschreiben-Vorlagen verwalten
-- **searchConfig**: Suchkonfigurationen erstellen und bearbeiten
-- **jobs**: Stellenangebote durchsuchen und Status aktualisieren
-- **applications**: Bewerbungen verwalten und tracken
-- **scheduler**: Scheduler-Status und manuelle Auslösung
-- **dashboard**: Übersichts-Statistiken
+## 🌐 Deployment
 
-## Sicherheit & Datenschutz
+### Manus Hosting (Empfohlen)
 
-- **Authentifizierung**: Manus OAuth für sichere Anmeldung
-- **Datenverschlüsselung**: Alle Daten werden verschlüsselt übertragen
-- **S3-Storage**: Sichere Speicherung von CVs und Dokumenten
-- **Session-Management**: JWT-basierte Sessions mit HttpOnly Cookies
-- **Input-Validierung**: Zod-Schema-Validierung für alle Eingaben
+```bash
+# Einfachstes Deployment - Ein Klick in der UI
+# Automatisches SSL, Datenbank, Storage, LLM-API inklusive
+```
 
-## Einschränkungen & Hinweise
+### Railway
+
+```bash
+# Railway CLI installieren
+npm install -g @railway/cli
+railway login
+
+# Projekt erstellen und deployen
+railway init
+railway add mysql
+railway up
+```
+
+### Docker
+
+```bash
+# Production Build
+docker-compose -f docker-compose.yml up -d
+
+# Mit custom .env
+docker-compose --env-file .env.production up -d
+```
+
+### Deployment-Script
+
+```bash
+# Interaktives Deployment-Script
+./deploy.sh
+
+# Optionen:
+# 1) Local (Development)
+# 2) Local (Production)
+# 3) Docker
+# 4) Railway
+# 5) Render
+# 6) Manus Hosting
+```
+
+Detaillierte Deployment-Anleitung: [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+---
+
+## 🧪 Tests
+
+### Tests ausführen
+
+```bash
+# Alle Tests
+pnpm test
+
+# Tests im Watch-Mode
+pnpm test --watch
+
+# Coverage Report
+pnpm test --coverage
+
+# TypeScript Type-Check
+pnpm check
+```
+
+### Test-Coverage
+
+- **24 Tests** - Alle bestanden ✅
+- **Job Scraping** - 3 Tests
+- **Document Management** - 4 Tests
+- **LLM Service** - 5 Tests
+- **Scheduler** - 5 Tests
+- **tRPC Routers** - 6 Tests
+- **Authentication** - 1 Test
+
+---
+
+## 🗺 Roadmap
+
+### Version 1.1 (Q1 2025)
+- [ ] LinkedIn Integration
+- [ ] Xing Integration
+- [ ] Monster Integration
+- [ ] Erweiterte ATS-Erkennung (Greenhouse, Lever, Workday)
+
+### Version 1.2 (Q2 2025)
+- [ ] Browser-Extension für One-Click-Apply
+- [ ] Mobile App (React Native)
+- [ ] Interview-Vorbereitung mit AI
+- [ ] Gehaltsverhandlungs-Assistent
+
+### Version 2.0 (Q3 2025)
+- [ ] Multi-User-Support
+- [ ] Team-Collaboration-Features
+- [ ] Advanced Analytics Dashboard
+- [ ] API für Drittanbieter-Integrationen
+
+---
+
+## 🤝 Beitragen
+
+Beiträge sind willkommen! Bitte beachten Sie:
+
+1. **Fork** das Repository
+2. **Branch** erstellen (`git checkout -b feature/AmazingFeature`)
+3. **Commit** Ihre Änderungen (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** zum Branch (`git push origin feature/AmazingFeature`)
+5. **Pull Request** öffnen
+
+### Development Guidelines
+
+- Folgen Sie dem bestehenden Code-Stil
+- Schreiben Sie Tests für neue Features
+- Aktualisieren Sie die Dokumentation
+- Verwenden Sie aussagekräftige Commit-Messages
+
+---
+
+## ⚠️ Rechtliche Hinweise
 
 ### Web-Scraping
 - Job-Portale können Anti-Bot-Maßnahmen implementieren
-- Cloudflare und ähnliche Dienste können Scraping blockieren
-- Rate-Limiting kann die Anzahl der Anfragen begrenzen
+- Beachten Sie die Nutzungsbedingungen der Job-Portale
+- Verwenden Sie das System verantwortungsvoll
 
 ### ATS-Systeme
 - Nicht alle ATS-Systeme können automatisch umgangen werden
 - Einige Portale erfordern manuelle Captcha-Lösung
 - Best-Practice-Strategien erhöhen die Erfolgsquote
 
-### Rechtliche Aspekte
-- Beachten Sie die Nutzungsbedingungen der Job-Portale
-- Automatisierte Bewerbungen können gegen ToS verstoßen
-- Verwenden Sie das System verantwortungsvoll
+### Datenschutz
+- Alle Daten werden verschlüsselt gespeichert
+- CVs und persönliche Daten bleiben privat
+- Keine Weitergabe an Dritte
 
-## Troubleshooting
+---
 
-### Scheduler läuft nicht
-```bash
-# Server-Logs prüfen
-cd /home/ubuntu/job_application_bot
-pnpm dev
-# Suchen Sie nach "[Scheduler] Initialized" in den Logs
-```
+## 📄 Lizenz
 
-### Keine Jobs gefunden
-- Prüfen Sie Ihre Suchkonfiguration
-- Erweitern Sie die Suchbegriffe
-- Fügen Sie weitere Standorte hinzu
-- Aktivieren Sie mehr Plattformen
+Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe [LICENSE](LICENSE) Datei für Details.
 
-### Bewerbungen schlagen fehl
-- Prüfen Sie die Application Logs
-- Stellen Sie sicher, dass ein CV hochgeladen ist
-- Überprüfen Sie die Internetverbindung
-- Manueller Retry über die UI
+---
 
-### Tests ausführen
-```bash
-pnpm test
-```
+## 🙏 Danksagungen
 
-## Entwicklung
+- Inspiriert durch die [r/Germany_Jobs](https://reddit.com/r/Germany_Jobs) Community
+- Dank an alle Open-Source-Projekte, die dieses Projekt möglich machen
+- Besonderer Dank an die Manus-Plattform für Hosting und LLM-API
 
-### Projekt-Struktur
-```
-job_application_bot/
-├── client/                 # Frontend React App
-│   ├── src/
-│   │   ├── pages/         # Page-Komponenten
-│   │   ├── components/    # Wiederverwendbare UI-Komponenten
-│   │   └── lib/           # tRPC Client
-├── server/                # Backend Express + tRPC
-│   ├── services/          # Business Logic
-│   ├── routers.ts         # tRPC Router
-│   └── db.ts              # Database Queries
-├── drizzle/               # Database Schema
-└── shared/                # Geteilte Types & Constants
-```
+---
 
-### Tests hinzufügen
-```bash
-# Neue Test-Datei erstellen
-touch server/services/myService.test.ts
-
-# Tests ausführen
-pnpm test
-
-# Tests im Watch-Mode
-pnpm test --watch
-```
-
-### Neue Features hinzufügen
-1. Schema in `drizzle/schema.ts` erweitern
-2. DB-Queries in `server/db.ts` hinzufügen
-3. Service-Logik in `server/services/` implementieren
-4. tRPC-Router in `server/routers.ts` erweitern
-5. Frontend-Komponenten in `client/src/pages/` erstellen
-6. Tests schreiben und ausführen
-
-## Support
+## 📞 Support
 
 Bei Fragen oder Problemen:
-- GitHub Issues: <repository-url>/issues
-- Manus Support: https://help.manus.im
 
-## Lizenz
+- **GitHub Issues**: [Issues](https://github.com/tibo47-161/job-application-bot/issues)
+- **Discussions**: [Discussions](https://github.com/tibo47-161/job-application-bot/discussions)
+- **Email**: [support@example.com](mailto:support@example.com)
 
-MIT License - siehe LICENSE Datei für Details
+---
 
-## Danksagungen
+<div align="center">
 
-Inspiriert durch die Reddit-Community r/Germany_Jobs und die Herausforderungen moderner Jobsuche mit ATS-Systemen.
+**Made with ❤️ by [tibo47-161](https://github.com/tibo47-161)**
+
+⭐ **Star this repo if you find it helpful!** ⭐
+
+</div>
