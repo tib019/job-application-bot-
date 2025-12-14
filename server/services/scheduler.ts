@@ -27,11 +27,11 @@ async function runJobSearchAndApply(): Promise<{
   let totalApplicationsSubmitted = 0;
 
   try {
-    // Get owner user
+    // Get owner user - if not found, skip this run (user needs to log in first)
     const owner = await getUserByOpenId(ENV.ownerOpenId);
     if (!owner) {
-      errors.push("Owner user not found");
-      return { jobsFound: 0, applicationsSubmitted: 0, errors };
+      console.log("[Scheduler] Owner user not found - waiting for first login");
+      return { jobsFound: 0, applicationsSubmitted: 0, errors: [] };
     }
 
     // Get active search configurations
