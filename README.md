@@ -1,4 +1,4 @@
-# 🤖 Job Application Bot
+# Job Application Bot
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen)](https://nodejs.org)
@@ -12,7 +12,7 @@ Inspiriert durch die Herausforderungen moderner Jobsuche mit Applicant Tracking 
 
 ---
 
-## 📋 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [Features](#-features)
 - [Demo](#-demo)
@@ -29,33 +29,33 @@ Inspiriert durch die Herausforderungen moderner Jobsuche mit Applicant Tracking 
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔍 **Automatische Jobsuche**
+### **Automatische Jobsuche**
 - **Multi-Platform-Scraping**: Durchsucht Indeed, StepStone und weitere Job-Portale
 - **Intelligente Filterung**: Branchen-, Standort- und Keyword-basierte Suche
 - **Relevanz-Scoring**: Automatische Bewertung der Job-Relevanz (0-100%)
 - **Duplikaterkennung**: Verhindert mehrfache Bewerbungen auf dieselbe Stelle
 
-### 🎯 **ATS-Optimierung**
+### **ATS-Optimierung**
 - **ATS-Erkennung**: Identifiziert automatisch verwendete ATS-Systeme
 - **Keyword-Optimierung**: Passt CVs und Anschreiben an ATS-Anforderungen an
 - **Best-Practice-Formulare**: Intelligentes Ausfüllen von Bewerbungsformularen
 - **Erfolgsquote-Tracking**: Misst und optimiert die Bewerbungsqualität
 
-### 🤖 **LLM-Integration**
+### **LLM-Integration**
 - **Individualisierte Anschreiben**: Automatische Generierung personalisierter Cover Letters
 - **Job-Matching**: Analyse der Stellenbeschreibung und Abgleich mit Ihrem Profil
 - **Qualitätssicherung**: Bewertung der Bewerbungsqualität vor dem Versand
 - **Kontinuierliche Verbesserung**: Lernt aus erfolgreichen Bewerbungen
 
-### ⏰ **Automatisierung**
+### **Automatisierung**
 - **4-Stunden-Scheduler**: Automatische Jobsuche alle 4 Stunden (0, 4, 8, 12, 16, 20 Uhr)
 - **Tägliche Updates**: Zusammenfassung der Aktivitäten jeden Abend um 20:00 Uhr
 - **Retry-Logik**: Automatische Wiederholung bei fehlgeschlagenen Bewerbungen
 - **Benachrichtigungen**: Echtzeit-Updates über neue Stellen und Bewerbungsstatus
 
-### 📊 **Dashboard & Verwaltung**
+### **Dashboard & Verwaltung**
 - **Übersichtsdashboard**: Statistiken zu Jobs, Bewerbungen und Erfolgsquoten
 - **Job-Verwaltung**: Filtern, Durchsuchen und Bewerben auf gefundene Stellen
 - **Bewerbungstracking**: Vollständiger Überblick über alle eingereichten Bewerbungen
@@ -64,7 +64,7 @@ Inspiriert durch die Herausforderungen moderner Jobsuche mit Applicant Tracking 
 
 ---
 
-## 🎬 Demo
+## Demo
 
 ### Dashboard
 ![Dashboard Overview](https://via.placeholder.com/800x400?text=Dashboard+Screenshot)
@@ -77,7 +77,7 @@ Inspiriert durch die Herausforderungen moderner Jobsuche mit Applicant Tracking 
 
 ---
 
-## 🛠 Technologie-Stack
+## Technologie-Stack
 
 ### Frontend
 - **React 19** - Moderne UI-Bibliothek
@@ -109,7 +109,7 @@ Inspiriert durch die Herausforderungen moderner Jobsuche mit Applicant Tracking 
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Voraussetzungen
 
@@ -189,7 +189,7 @@ docker-compose logs -f
 
 ---
 
-## ⚙️ Konfiguration
+## ️ Konfiguration
 
 ### Erste Schritte
 
@@ -219,7 +219,7 @@ Sie können jederzeit eine manuelle Jobsuche auslösen:
 
 ---
 
-## 🚀 Verwendung
+## Verwendung
 
 ### Automatischer Modus
 
@@ -251,28 +251,28 @@ Verfolgen Sie Ihre Bewerbungen unter "Bewerbungen":
 
 ---
 
-## 🏗 Architektur
+## Architektur
 
 ### System-Übersicht
 
 ```
-┌─────────────────┐
-│   React Frontend│
-│   (Dashboard)   │
-└────────┬────────┘
-         │ tRPC
-         ▼
-┌─────────────────┐
-│  Express Server │
-│   (tRPC API)    │
-└────────┬────────┘
-         │
-    ┌────┴────┬──────────┬──────────┐
-    ▼         ▼          ▼          ▼
-┌────────┐ ┌──────┐ ┌────────┐ ┌──────┐
-│Database│ │ LLM  │ │   S3   │ │Cron  │
-│ MySQL  │ │ API  │ │Storage │ │Jobs  │
-└────────┘ └──────┘ └────────┘ └──────┘
+
+ React Frontend
+ (Dashboard)
+
+ tRPC
+
+
+ Express Server
+ (tRPC API)
+
+
+
+
+
+Database LLM S3 Cron
+ MySQL API Storage Jobs
+
 ```
 
 ### Backend-Services
@@ -296,7 +296,7 @@ Verfolgen Sie Ihre Bewerbungen unter "Bewerbungen":
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 ### Manus Hosting (Empfohlen)
 
@@ -347,7 +347,7 @@ Detaillierte Deployment-Anleitung: [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ---
 
-## 🧪 Tests
+## Tests
 
 ### Tests ausführen
 
@@ -367,7 +367,7 @@ pnpm check
 
 ### Test-Coverage
 
-- **24 Tests** - Alle bestanden ✅
+- **24 Tests** - Alle bestanden
 - **Job Scraping** - 3 Tests
 - **Document Management** - 4 Tests
 - **LLM Service** - 5 Tests
@@ -377,7 +377,7 @@ pnpm check
 
 ---
 
-## 🗺 Roadmap
+## Roadmap
 
 ### Version 1.1 (Q1 2025)
 - [ ] LinkedIn Integration
@@ -399,7 +399,7 @@ pnpm check
 
 ---
 
-## 🤝 Beitragen
+## Beitragen
 
 Beiträge sind willkommen! Bitte beachten Sie:
 
@@ -418,7 +418,7 @@ Beiträge sind willkommen! Bitte beachten Sie:
 
 ---
 
-## ⚠️ Rechtliche Hinweise
+## ️ Rechtliche Hinweise
 
 ### Web-Scraping
 - Job-Portale können Anti-Bot-Maßnahmen implementieren
@@ -437,13 +437,13 @@ Beiträge sind willkommen! Bitte beachten Sie:
 
 ---
 
-## 📄 Lizenz
+## Lizenz
 
 Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe [LICENSE](LICENSE) Datei für Details.
 
 ---
 
-## 🙏 Danksagungen
+## Danksagungen
 
 - Inspiriert durch die [r/Germany_Jobs](https://reddit.com/r/Germany_Jobs) Community
 - Dank an alle Open-Source-Projekte, die dieses Projekt möglich machen
@@ -451,7 +451,7 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe [LICENSE](LICENSE) Da
 
 ---
 
-## 📞 Support
+## Support
 
 Bei Fragen oder Problemen:
 
@@ -463,8 +463,8 @@ Bei Fragen oder Problemen:
 
 <div align="center">
 
-**Made with ❤️ by [tibo47-161](https://github.com/tibo47-161)**
+**Made with ️ by [tibo47-161](https://github.com/tibo47-161)**
 
-⭐ **Star this repo if you find it helpful!** ⭐
+ **Star this repo if you find it helpful!**
 
 </div>

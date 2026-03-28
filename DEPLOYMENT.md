@@ -150,7 +150,7 @@ railway up
 
 ### Vercel (Frontend + Serverless Functions)
 
-⚠️ **Hinweis**: Vercel eignet sich nur bedingt, da der Scheduler kontinuierlich laufen muss.
+️ **Hinweis**: Vercel eignet sich nur bedingt, da der Scheduler kontinuierlich laufen muss.
 
 1. **Vercel CLI installieren**
 ```bash
