@@ -31,31 +31,31 @@ Inspiriert durch die Herausforderungen moderner Jobsuche mit Applicant Tracking 
 
 ## Features
 
-### **Automatische Jobsuche**
+### Automatische Jobsuche**
 - **Multi-Platform-Scraping**: Durchsucht Indeed, StepStone und weitere Job-Portale
 - **Intelligente Filterung**: Branchen-, Standort- und Keyword-basierte Suche
 - **Relevanz-Scoring**: Automatische Bewertung der Job-Relevanz (0-100%)
 - **Duplikaterkennung**: Verhindert mehrfache Bewerbungen auf dieselbe Stelle
 
-### **ATS-Optimierung**
+### ATS-Optimierung**
 - **ATS-Erkennung**: Identifiziert automatisch verwendete ATS-Systeme
 - **Keyword-Optimierung**: Passt CVs und Anschreiben an ATS-Anforderungen an
 - **Best-Practice-Formulare**: Intelligentes Ausfüllen von Bewerbungsformularen
 - **Erfolgsquote-Tracking**: Misst und optimiert die Bewerbungsqualität
 
-### **LLM-Integration**
+### LLM-Integration**
 - **Individualisierte Anschreiben**: Automatische Generierung personalisierter Cover Letters
 - **Job-Matching**: Analyse der Stellenbeschreibung und Abgleich mit Ihrem Profil
 - **Qualitätssicherung**: Bewertung der Bewerbungsqualität vor dem Versand
 - **Kontinuierliche Verbesserung**: Lernt aus erfolgreichen Bewerbungen
 
-### **Automatisierung**
+### Automatisierung**
 - **4-Stunden-Scheduler**: Automatische Jobsuche alle 4 Stunden (0, 4, 8, 12, 16, 20 Uhr)
 - **Tägliche Updates**: Zusammenfassung der Aktivitäten jeden Abend um 20:00 Uhr
 - **Retry-Logik**: Automatische Wiederholung bei fehlgeschlagenen Bewerbungen
 - **Benachrichtigungen**: Echtzeit-Updates über neue Stellen und Bewerbungsstatus
 
-### **Dashboard & Verwaltung**
+### Dashboard & Verwaltung**
 - **Übersichtsdashboard**: Statistiken zu Jobs, Bewerbungen und Erfolgsquoten
 - **Job-Verwaltung**: Filtern, Durchsuchen und Bewerben auf gefundene Stellen
 - **Bewerbungstracking**: Vollständiger Überblick über alle eingereichten Bewerbungen
@@ -189,7 +189,7 @@ docker-compose logs -f
 
 ---
 
-## ️ Konfiguration
+## Konfiguration
 
 ### Erste Schritte
 
@@ -418,7 +418,7 @@ Beiträge sind willkommen! Bitte beachten Sie:
 
 ---
 
-## ️ Rechtliche Hinweise
+## Rechtliche Hinweise
 
 ### Web-Scraping
 - Job-Portale können Anti-Bot-Maßnahmen implementieren
@@ -463,7 +463,7 @@ Bei Fragen oder Problemen:
 
 <div align="center">
 
-**Made with ️ by [tibo47-161](https://github.com/tibo47-161)**
+**Entwickelt von [Tobias Buss](https://github.com/tib019)**
 
  **Star this repo if you find it helpful!**
 
