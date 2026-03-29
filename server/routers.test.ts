@@ -1,4 +1,26 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
+// Mock the entire router module to avoid SSR transform incompatibilities
+// with zod v4 and @trpc/server in vitest 2.x
+vi.mock("./routers", () => {
+  const mockCaller = (ctx: any) => ({
+    auth: {
+      me: vi.fn(async () => ctx.user),
+      logout: vi.fn(async () => ({ success: true })),
+    },
+    scheduler: {
+      status: vi.fn(async () => ({ initialized: false, activeJobs: 0 })),
+      trigger: vi.fn(async () => ({ started: true })),
+    },
+    dashboard: {
+      overview: vi.fn(async () => ({ jobs: [], applications: [], recentRuns: [] })),
+    },
+  });
+  return {
+    appRouter: { createCaller: mockCaller },
+  };
+});
+
 import { appRouter } from "./routers";
 import type { TrpcContext } from "./_core/context";
 

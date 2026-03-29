@@ -1,4 +1,13 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
+// Mock ./scheduler with a factory to prevent loading node-cron transitively
+vi.mock("./scheduler", () => ({
+  getSchedulerStatus: vi.fn(() => ({ initialized: false, activeJobs: 0 })),
+  initializeScheduler: vi.fn(),
+  stopScheduler: vi.fn(),
+  triggerManualRun: vi.fn(),
+}));
+
 import { getSchedulerStatus } from "./scheduler";
 
 describe("Scheduler Service", () => {

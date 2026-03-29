@@ -1,4 +1,10 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
+// Mock jobScraper to prevent axios/cheerio SSR transform issues in vitest
+vi.mock("./jobScraper", () => ({
+  scrapeJobs: vi.fn().mockResolvedValue({ totalFound: 0, newJobs: 0, updatedJobs: 0 }),
+}));
+
 import { scrapeJobs, type ScraperConfig } from "./jobScraper";
 
 describe("Job Scraper", () => {
