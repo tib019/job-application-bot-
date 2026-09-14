@@ -1,5 +1,8 @@
 # Job Application Bot
 
+![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
+![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
