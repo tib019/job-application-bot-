@@ -20,7 +20,14 @@ export default defineConfig({
   test: {
     environment: "node",
     pool: "forks",
-    include: ["server/**/*.test.ts", "server/**/*.spec.ts"],
+    // shared/ war nicht erfasst: Tests zu Modulen, die sich Server und Client
+    // teilen, waeren nie gelaufen.
+    include: [
+      "server/**/*.test.ts",
+      "server/**/*.spec.ts",
+      "shared/**/*.test.ts",
+      "shared/**/*.spec.ts",
+    ],
     setupFiles: ["./vitest.setup.ts"],
   },
 });

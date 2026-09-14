@@ -1,4 +1,5 @@
 import { invokeLLM } from "../_core/llm";
+import { aiDisclosure, type AiDisclosure } from "../../shared/aiDisclosure";
 import type { JobPosting, CvDocument, CoverLetterTemplate } from "../../drizzle/schema";
 
 export interface CoverLetterGenerationResult {
@@ -6,6 +7,11 @@ export interface CoverLetterGenerationResult {
   matchScore: number;
   keyPoints: string[];
   suggestions: string[];
+  /**
+   * Maschinenlesbare Kennzeichnung nach Art. 50 Abs. 2 KI-VO. Das Anschreiben
+   * ist ein synthetischer Inhalt und muss als solcher erkennbar sein.
+   */
+  aiDisclosure: AiDisclosure;
 }
 
 export interface AtsOptimizationResult {
@@ -13,6 +19,7 @@ export interface AtsOptimizationResult {
   keywords: string[];
   score: number;
   improvements: string[];
+  aiDisclosure: AiDisclosure;
 }
 
 /**
@@ -87,6 +94,7 @@ Generate a compelling cover letter that maximizes the candidate's chances of get
       matchScore,
       keyPoints,
       suggestions,
+      aiDisclosure: aiDisclosure("cover_letter"),
     };
   } catch (error) {
     console.error("[LLM] Error generating cover letter:", error);
@@ -234,6 +242,7 @@ Provide:
       keywords,
       score,
       improvements,
+      aiDisclosure: aiDisclosure("ats_optimization"),
     };
   } catch (error) {
     console.error("[LLM] Error optimizing for ATS:", error);

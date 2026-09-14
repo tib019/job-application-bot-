@@ -126,6 +126,16 @@ export default function Applications() {
                         {app.coverLetter.substring(0, 500)}
                         {app.coverLetter.length > 500 && "..."}
                       </div>
+                      {/*
+                        Art. 50 Abs. 2 KI-VO (Verordnung (EU) 2024/1689,
+                        anwendbar seit 02.08.2026): das Anschreiben ist ein
+                        synthetischer Inhalt. Die maschinenlesbare
+                        Kennzeichnung liefert die API im Feld aiDisclosure,
+                        hier steht der sichtbare Hinweis.
+                      */}
+                      <p className="mt-2 text-xs text-gray-500">
+                        Von einem KI-System erzeugt — vor dem Versand prüfen.
+                      </p>
                     </details>
                   )}
                 </CardContent>
